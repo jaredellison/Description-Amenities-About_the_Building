@@ -33,12 +33,12 @@ class App extends React.Component{
         .then((response) => {
             //console.log(response.data);
             let data = response.data;
-            this.setState({fullDescriptionBox: data, 
-                descriptionPreSpan: data.description.slice(0,300), 
+            this.setState({fullDescriptionBox: data,
+                descriptionPreSpan: data.description.slice(0,300),
                 descriptionPostSpan: data.description.slice(300),
-                highlightAmens: data.highlightAmens, 
-                buildingAmens: data.buildingAmens, 
-                listingAmens: data.listingAmens, 
+                highlightAmens: data.highlightAmens,
+                buildingAmens: data.buildingAmens,
+                listingAmens: data.listingAmens,
                 outdoorAmens: data.outdoorAmens});
         })
     }
@@ -55,7 +55,7 @@ class App extends React.Component{
                 <button onClick={() => {showMore()}} id='readMore'>Read More</button>
             </div>
             <hr class='separator'/>
-            <div>  
+            <div>
                 <h5>Highlight Amenities </h5>
                 <HighlightAmens highlights={this.state.highlightAmens}/>
                 <h5>Building Amenities </h5>
@@ -70,4 +70,4 @@ class App extends React.Component{
     }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('description-container'));
