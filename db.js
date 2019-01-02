@@ -1,7 +1,14 @@
 var mongoose = require('mongoose');
 
+// var db = mongoose.connect(process.env.PORT || 'mongodb://localhost:27017/streetBreezy');
+mongoose.connect('mongodb://localhost/streetBreezy');
 
-var db = mongoose.connect(process.env.PORT || 'mongodb://localhost:27017/streetBreezy');
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('Connected to database');
+});
+
 
 let DescriptionBoxSchema = mongoose.Schema({
     id: Number,
@@ -28,28 +35,29 @@ let saver = (description, highlightAmenitiesCreator, highlightAmenitiesArray, bu
             divider = 1;
         }
         let input1 = highlightAmenitiesCreator(divider, highlightAmenitiesArray);
-        //console.log('INPUT1: ', input1)
+        // console.log('INPUT1: ', input1)
         let input2 = buildingAmenitiesCreator(divider, buildingAmenitiesArray);
-        //console.log('INPUT2: ', input2)
+        // console.log('INPUT2: ', input2)
         let input3 = listingAmenitiesCreator(divider, listingAmenitiesArray);
-        //console.log('INPUT3: ', input3)
+        // console.log('INPUT3: ', input3)
         let input4 = outdoorAmenitiesCreator(divider, outdoorAmenitiesArray);
-        //console.log('INPUT4: ', input4)
-        DescriptionBox.findOne({id: i}, (err, exists) => {
-            if(err){
-                console.log('THERE IS AN ERROR!!!' , err);
-            } else if (!exists){
+        // console.log('INPUT4: ', input4)
+        // DescriptionBox.findOne({id: i}, (err, exists) => {
+        //     if(err){
+        //         console.log('THERE IS AN ERROR!!!' , err);
+        //     } else if (!exists){
                 let newDescriptionBox = new DescriptionBox({
                     id: i,
-                    description: description, 
-                    highlightAmens: input1 || null, 
+                    description: description,
+                    highlightAmens: input1 || null,
                     buildingAmens: input2 || null,
-                    listingAmens: input3 || null, 
-                    outdoorAmens: input4 || null 
-                }); 
+                    listingAmens: input3 || null,
+                    outdoorAmens: input4 || null
+                });
+                // console.log('newDescriptionBox', newDescriptionBox);
                 newDescriptionBox.save();
-            }
-        })
+            // }
+        // })
     }
 }
 

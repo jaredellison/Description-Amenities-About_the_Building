@@ -14,7 +14,7 @@ let highlightsCreator = (divider, HLAArray) => {
             newHLArray.push(amenity);
         }
     }
-    //console.log(newHLArray);
+    // console.log('newHLArray',newHLArray);
     return newHLArray
 }
 
