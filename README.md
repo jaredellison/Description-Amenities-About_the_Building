@@ -12,7 +12,7 @@
   - Node and Express framework for web
   - MongoDB and Mongoose ODM for database
 - **Setup steps**
-  1) Create a server instance to run the application
+1) Create a server instance to run the application
      - Ubuntu 18.04 is recommended 
  2) Allow traffic on the server at ports 22 (SSH) and 80 (HTTP)
  3) Create SSH connection
