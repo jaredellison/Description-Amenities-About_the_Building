@@ -13,7 +13,7 @@ A team of developers each designed individual components and created them as ful
   - MongoDB and Mongoose ODM for database
 - **Setup steps**
  1) Create a server instance to run the application
-   - Ubuntu 18.04 is recommended 
+     - Ubuntu 18.04 is recommended 
  2) Allow traffic on the server at ports 22 (SSH) and 80 (HTTP)
  3) Create SSH connection
  3) Install [Node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04) and [Git](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04) 
@@ -25,9 +25,12 @@ A team of developers each designed individual components and created them as ful
 
 ## The Team 
 **Developers**
-- [Jared Ellison](https://github.com/jaredellison) >> [Image Carousel](https://github.com/Team-Elysium/image-carousel-component)
-- [Muhammad Mosaad](https://github.com/mowithafro) >> [Similar Listings](https://github.com/Team-Elysium/Similar-Listings-Recommendations)
-- [Sujin Lee](https://github.com/slee1016)         >> [Listing Details](https://github.com/Team-Elysium/listing-details)
+- [Jared Ellison](https://github.com/jaredellison) 
+  - [Image Carousel](https://github.com/Team-Elysium/image-carousel-component)
+- [Muhammad Mosaad](https://github.com/mowithafro) 
+  - [Similar Listings](https://github.com/Team-Elysium/Similar-Listings-Recommendations)
+- [Sujin Lee](https://github.com/slee1016)         
+  - [Listing Details](https://github.com/Team-Elysium/listing-details)
 
 **Technical Mentor**
 - [Trenton Going](https://github.com/trentgoing)
