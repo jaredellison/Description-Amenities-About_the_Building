@@ -13,7 +13,7 @@ A team of developers each designed individual components and created them as ful
   - MongoDB and Mongoose ODM for database
 - **Setup steps**
  1) Create a server instance to run the application
-  - Ubuntu 18.04 is recommended 
+   - Ubuntu 18.04 is recommended 
  2) Allow traffic on the server at ports 22 (SSH) and 80 (HTTP)
  3) Create SSH connection
  3) Install [Node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04) and [Git](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04) 
