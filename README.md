@@ -18,9 +18,10 @@
  3) Create SSH connection
  3) Install [Node](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-16-04) and [Git](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu-18-04) 
  4) Run command "git clone https://github.com/Team-Elysium/Description-Amenities-About_the_Building.git"
- 5) Run command "sudo npm install"
- 6) Run commands "npm run react-dev" and "npm start" 
- 7) Service should be up at running!
+ 5) Cd into "Description-Amenities-About_the_Building"
+ 6) Run command "sudo npm install"
+ 7) Run commands "npm run react-dev" and "npm start" 
+ 8) Service should be up at running!
   
 
 ## The Team 
