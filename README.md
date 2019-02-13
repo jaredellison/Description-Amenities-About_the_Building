@@ -8,9 +8,9 @@ A team of developers each designed individual components and created them as ful
 
 ## Setup
 - **Dependencies**
- - React framework for front-end
- - Node and Express framework for web
- - MongoDB and Mongoose ODM for database
+  - React framework for front-end
+  - Node and Express framework for web
+  - MongoDB and Mongoose ODM for database
 - **Setup steps**
  1) Create a server instance to run the application
   - Ubuntu 18.04 is recommended 
@@ -28,5 +28,6 @@ A team of developers each designed individual components and created them as ful
 - [Jared Ellison](https://github.com/jaredellison) >> [Image Carousel](https://github.com/Team-Elysium/image-carousel-component)
 - [Muhammad Mosaad](https://github.com/mowithafro) >> [Similar Listings](https://github.com/Team-Elysium/Similar-Listings-Recommendations)
 - [Sujin Lee](https://github.com/slee1016)         >> [Listing Details](https://github.com/Team-Elysium/listing-details)
+
 **Technical Mentor**
 - [Trenton Going](https://github.com/trentgoing)
