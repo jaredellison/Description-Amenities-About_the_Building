@@ -9,7 +9,6 @@ db.once('open', function() {
   console.log('Connected to database');
 });
 
-
 let DescriptionBoxSchema = mongoose.Schema({
     id: Number,
     description: String,

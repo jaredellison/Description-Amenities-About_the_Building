@@ -13,6 +13,7 @@ class App extends React.Component{
         super(props);
         this.state = {
             fullDescriptionBox: undefined,
+            description: '',
             descriptionPreSpan: '',
             descriptionPostSpan: '',
             highlightAmens: [],
@@ -20,26 +21,30 @@ class App extends React.Component{
             listingAmens: [],
             outdoorAmens: []
         }
-        this.renderer = this.renderer.bind(this);
+        this.renderFunc = this.renderFunc.bind(this);
     }
 
     componentDidMount(){
-        this.renderer();
+        // console.log('LOVE YOU KENNNYYYY')
+        this.renderFunc();
     }
 
-    renderer(){
-        //console.log('renderer called')
-        Axios.get('/streetBreezy/api/99')
+    renderFunc(){
+        Axios.get(`/api/description${window.location.pathname}`)
         .then((response) => {
-            //console.log(response.data);
             let data = response.data;
             this.setState({fullDescriptionBox: data,
+                description: data.description,
                 descriptionPreSpan: data.description.slice(0,300),
                 descriptionPostSpan: data.description.slice(300),
                 highlightAmens: data.highlightAmens,
                 buildingAmens: data.buildingAmens,
                 listingAmens: data.listingAmens,
                 outdoorAmens: data.outdoorAmens});
+        })
+        .catch((err) => {
+            console.log(`ERROR LOADING DESCRIPTION WITH ID ${window.location.pathname}`);
+            console.log('THIS WAS THE ERR: ', err);
         })
     }
 
@@ -49,20 +54,21 @@ class App extends React.Component{
             <div>
                 <Table />
             </div>
-            <div>
-                <h5>Description: </h5>
+            <div id='descriptionBox'>
+                <h5 id='descriptionHead'>Description </h5>
                 <p id='description'>{this.state.descriptionPreSpan}<span id='dots'>...</span><span id='moreText'>{this.state.descriptionPostSpan}</span></p>
                 <button onClick={() => {showMore()}} id='readMore'>Read More</button>
             </div>
-            <hr class='separator'/>
+            <hr className='separator'/>
             <div>
-                <h5>Highlight Amenities </h5>
+                <h5 id="amenitiesHead">Amenities</h5>
+                <h5 id='highlightAmens' class="amens">Highlights </h5>
                 <HighlightAmens highlights={this.state.highlightAmens}/>
-                <h5>Building Amenities </h5>
+                <h5 class="amens">Building Amenities </h5>
                 <BuildingAmens buildings={this.state.buildingAmens}/>
-                <h5>Listing Amenities </h5>
+                <h5 class="amens">Listing Amenities </h5>
                 <ListingAmens listings={this.state.listingAmens}/>
-                <h5>Outdoor Amenities </h5>
+                <h5 class="amens">Outdoor Amenities </h5>
                 <OutdoorAmens outdoors={this.state.outdoorAmens}/>
             </div>
         </div>

@@ -1,13 +1,18 @@
 var dbComponents = require('./db.js');
 
-exports.retriever = (req,res) => {
-    let {id} = req.params;
+module.exports.retriever = (req,res) => {
+    const {id} = req.params;
     dbComponents.DescriptionBox.findOne({id: id}).exec((err, data) => {
         if(err){
-            res.send(err);
+            res.sendStatus(status);
         } else if(data){
             res.send(data);
         }
     })
 }
+
+// module.exports.alt = (req, res) => {  
+//     console.log(`ALT RETRIEVER CALLED AT CONTOLLER FOR ID ${id}`);
+//     res.send(404);
+// }
 
