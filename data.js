@@ -61,7 +61,8 @@ let generator = () => {
     return faker.lorem.words(num = 190);
 }
 
-dbComponents.saver(generator(), highlightsCreator, highlightAmenities, buildingAmensCreator, buildingAmenities, listingAmensCreator, listingAmenities, outdoorAmensCreator, outdoorAmenities);
+dbComponents.db.once('open', function() {
+  console.log('Saving to database');
+  dbComponents.saver(generator(), highlightsCreator, highlightAmenities, buildingAmensCreator, buildingAmenities, listingAmensCreator, listingAmenities, outdoorAmensCreator, outdoorAmenities);
+});
 
-
-//Got error "FATAL ERROR: Ineffective mark-compacts near heap limit Allocation failed - JavaScript heap out of memory"
