@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./server.js",
-    "proxy-start": "nodemon ./proxy.js",
-    "react-dev": "webpack -p --watch"
+    "start-dev": "(mongod > /dev/null & ) && (nodemon server/ server/index.js)",
+    "start": "(mongod > /dev/null & ) && (node server.js)",
+    "build-dev": "webpack -d --watch",
+    "build": "webpack -p"
   },
   "author": "",
   "license": "ISC",
