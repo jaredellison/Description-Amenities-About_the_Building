@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start-dev": "(mongod > /dev/null & ) && (nodemon server/ server/index.js)",
+    "start-dev": "(mongod > /dev/null & ) && (nodemon server.js)",
     "start": "(mongod > /dev/null & ) && (node server.js)",
     "build-dev": "webpack -d --watch",
     "build": "webpack -p"
