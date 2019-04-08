@@ -1,135 +1,171 @@
-#entireDescriptionBox{
-    width: 100%;
-    max-height: 100%;
-    background-color: white;
-    line-height: 40px;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+#entireDescriptionBox {
+  width: 100%;
+  max-height: 100%;
+  background-color: white;
+  line-height: 40px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 }
 
-table{
-    height: 100px;
-    width: 100%;
-    table-layout: auto;
-    border: solid 0.2px rgb(219, 225, 230);
+table {
+  height: 100px;
+  width: 100%;
+  table-layout: auto;
+  border: solid 0.2px rgb(219, 225, 230);
 }
 
-.tabletext{
-    text-align: left;
-    padding-left: 5px;
-    font-size: 10pt;
+.table-title {
+  font-weight: bold;
+  color: #a1a1a1;
 }
 
-#table0x0, #table0x1{
-    border-left: solid 1px transparent;
-    border-right: solid 0.2px rgb(219, 225, 230);
+.tabletext {
+  text-align: left;
+  padding-left: 5px;
+  font-size: 10pt;
 }
 
-#table2x0, #table2x1{
-    border-right: solid 1px transparent;
-    border-left: solid 0.2px rgb(219, 225, 230);
+#table0x0,
+#table0x1 {
+  border-left: solid 1px transparent;
+  border-right: solid 0.2px rgb(219, 225, 230);
 }
 
-#table0x0, #table1x0, #table2x0{
-    border-bottom: solid 0.2px rgb(219, 225, 230);
+#table2x0,
+#table2x1 {
+  border-right: solid 1px transparent;
+  border-left: solid 0.2px rgb(219, 225, 230);
 }
 
-ul #hLAmens, #bAmens, #lAmens, #oDAmens{
-    list-style-type: none;
-    columns: 2;
+#table0x0,
+#table1x0,
+#table2x0 {
+  border-bottom: solid 0.2px rgb(219, 225, 230);
 }
 
-li{
-    margin: 0 auto;
-    text-align: left;
+ul #hLAmens,
+#bAmens,
+#lAmens,
+#oDAmens {
+  list-style-type: none;
+  columns: 2;
 }
 
-#petsAllowed{
-    list-style-image: url('https://cdn-assets-s3.streeteasy.com/assets/svg/amenities/pets-de6ef011d202b0b144a208fb05c1f5751fef9f346f80b0034160c0f5b1eacd86.svg');
-    list-style-position: inside;
+li {
+  margin: 0 auto;
+  text-align: left;
 }
 
-#fullTimeDoorman{
-    list-style-image: url('https://cdn-assets-s3.streeteasy.com/assets/svg/amenities/doorman-ad5076f835f9f8d6b2cb33bed3ade62bb5eb7c8088ffcc66dec1d6b2f25d076d.svg');
-    list-style-position: inside;
+#petsAllowed {
+  list-style-image: url('https://cdn-assets-s3.streeteasy.com/assets/svg/amenities/pets-de6ef011d202b0b144a208fb05c1f5751fef9f346f80b0034160c0f5b1eacd86.svg');
+  list-style-position: inside;
 }
 
-#elevator{
-    list-style-image: url('https://cdn-assets-s3.streeteasy.com/assets/svg/amenities/elevator-4d75d7c5d2335a6f215837e7b3104e50d796388e8cb3ccbaf25c67a5b1f00fae.svg');
-    list-style-position: inside;
+#fullTimeDoorman {
+  list-style-image: url('https://cdn-assets-s3.streeteasy.com/assets/svg/amenities/doorman-ad5076f835f9f8d6b2cb33bed3ade62bb5eb7c8088ffcc66dec1d6b2f25d076d.svg');
+  list-style-position: inside;
 }
 
-#washer_dryerUnit{
-    list-style-image: url('https://cdn-assets-s3.streeteasy.com/assets/svg/amenities/laundry-3bda4fe74ebb92d2a28e80d8164deea6ee4a94ecca832dac8fef3abdbc8e54f6.svg');
-    list-style-position: inside;
+#elevator {
+  list-style-image: url('https://cdn-assets-s3.streeteasy.com/assets/svg/amenities/elevator-4d75d7c5d2335a6f215837e7b3104e50d796388e8cb3ccbaf25c67a5b1f00fae.svg');
+  list-style-position: inside;
 }
 
-#moreText{
-    display: none;
+#washer_dryerUnit {
+  list-style-image: url('https://cdn-assets-s3.streeteasy.com/assets/svg/amenities/laundry-3bda4fe74ebb92d2a28e80d8164deea6ee4a94ecca832dac8fef3abdbc8e54f6.svg');
+  list-style-position: inside;
 }
 
-#descriptionBox{
-    margin-bottom: -10px;
+#moreText {
+  display: none;
 }
 
-#description{
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    overflow: hidden;
-    text-align: left;
-    /* background-image: linear-gradient(to bottom, transparent, rgb(236, 236, 236)); */
+#descriptionBox {
+  margin-bottom: -10px;
 }
 
-h5{
-    font-weight: bold;
-    text-align: left;
+.maximize-description {
+  max-height: 1000px;
+  margin-bottom: 1em;
 }
 
-#descriptionHead{
-    font-size: 32px;
-    line-height: 40px;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-weight: 200;
+.minimize-description {
+  max-height: 9em;
+  margin-bottom: 0em;
 }
 
-#amenitiesHead{
-    font-size: 32px;
-    line-height: 40px;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-weight: 200;
-}
-#highlightAmens{
-    align-content: left;
-}
-
-.amens{
-    font-size: 18px;
-    line-height: 40px;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    color: #a1a1a1;
+#description {
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+  text-align: left;
+  white-space: pre-wrap;
+  transition: max-height .5s ease-in;
 }
 
-HighlightAmens{
-    font-weight: 200;
+#description-text-container::after{
+  background: -webkit-linear-gradient(rgba(255,255,255,0), white 75%);
+  content: "";
+  display: block;
+  height: 4em;
+  left: 0;
+  position: relative;
+  top: 0;
+  width: 100%;
+  margin: -3em 0 0 0;
 }
 
-BuildingAmens{
-    font-weight: 200;
+h5 {
+  font-weight: bold;
+  text-align: left;
 }
 
-ListingAmens{
-    font-weight: 200;
+#descriptionHead {
+  font-size: 32px;
+  line-height: 40px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 200;
 }
 
-OutdoorAmens{
-    font-weight: 200;
+#amenitiesHead {
+  font-size: 32px;
+  line-height: 40px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+#highlightAmens {
+  align-content: left;
 }
 
-#readMore{
-    font-weight: 700;
-    color: #0080C6;
-    font-size: 12px;
-    border: none;
-    text-transform: uppercase;
+.amens {
+  font-size: 18px;
+  line-height: 40px;
+  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #a1a1a1;
 }
 
+HighlightAmens {
+  font-weight: 200;
+}
+
+BuildingAmens {
+  font-weight: 200;
+}
+
+ListingAmens {
+  font-weight: 200;
+}
+
+OutdoorAmens {
+  font-weight: 200;
+}
+
+#readMore {
+  font-weight: 700;
+  color: #0080c6;
+  font-size: 12px;
+  border: none;
+  text-transform: uppercase;
+  display: block;
+  text-align: left;
+}
